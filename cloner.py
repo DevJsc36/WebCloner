@@ -20,9 +20,9 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-type", "text/html")
         self.end_headers()
-        #GETTER
+        #GET HTML
         r = requests.get(url)
-        #SETTER
+        #SET HTML
         self.wfile.write(bytes(r.content))
 
 
